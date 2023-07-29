@@ -39,11 +39,17 @@ public class Player : MonoBehaviour
         anim.Play("Cast Skill");
     }
 
+ 
     private IEnumerator GameOver()
     {
-        yield return new WaitForSecondsRealtime(1f);
+        
         //panel.SetActive(true);
         Debug.Log("check");
-        Time.timeScale = 0;
+        //Time.timeScale = 0;
+        //yield return new WaitForSecondsRealtime(1f);
+        GameOverPanel.instance.GameOver();
+        yield return null;
+
+
     }
 }

@@ -28,7 +28,7 @@ public class Player : MonoBehaviour
             isAlive = false;
             anim.Play("Die");
             Debug.Log("Die");
-            StartCoroutine("GameOver");
+            GameOverPanel.instance.GameOver();
             
         }
 
@@ -40,16 +40,16 @@ public class Player : MonoBehaviour
     }
 
  
-    private IEnumerator GameOver()
-    {
+    //private IEnumerator GameOver()
+    //{
         
-        //panel.SetActive(true);
-        Debug.Log("check");
-        //Time.timeScale = 0;
-        //yield return new WaitForSecondsRealtime(1f);
-        GameOverPanel.instance.GameOver();
-        yield return null;
+    //    //panel.SetActive(true);
+    //    Debug.Log("check");
+    //    //Time.Scale = 0f
+    //    //yield return new WaitForSecondsRealtime(1f);
+    //    GameOverPanel.instance.GameOver();
+    //    yield return null;
 
 
-    }
+    //}
 }

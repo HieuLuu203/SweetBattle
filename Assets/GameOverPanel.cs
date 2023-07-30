@@ -1,26 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameOverPanel : MonoBehaviour
 {
     // Start is called before the first frame update
-
     public static GameOverPanel instance {  get; private set; }
-    [SerializeField] private Animator wrapAnimator;
-
+    private Animator wrapAnimator;
     private void Awake()
     {
         instance = this; 
-        
-
     }
     void Start()
     {
-        gameObject.SetActive(true);
+        gameObject.SetActive(false);
+        wrapAnimator = transform.Find("Wrap").gameObject.GetComponent<Animator>();
         
-
-        wrapAnimator = transform.Find("Wrap").gameObject.transform.GetComponent<Animator>();
+        
     }
 
     // Update is called once per frame
@@ -31,7 +28,18 @@ public class GameOverPanel : MonoBehaviour
 
     public void GameOver()
     {
+        Debug.Log("ahihi");
         gameObject.SetActive(true);
         wrapAnimator.SetBool("isOpen", true);
+    }
+
+    public void OnRePlayButton()
+    {
+        SceneManager.LoadScene("GamePlay");
+    }
+
+    public void OnHomeButton()
+    {
+        SceneManager.LoadScene("Home");
     }
 }

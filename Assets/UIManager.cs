@@ -18,22 +18,12 @@ public class UIManager : MonoBehaviour
     }
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-    }
 
-    public void PauseGame()
-    {
-        Time.timeScale = 0;
-    }
-
-    public void Continue()
-    {
-        Time.timeScale = 1;
     }
 }

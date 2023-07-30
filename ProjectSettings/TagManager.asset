@@ -46,17 +46,17 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: BG
-    uniqueID: 2752818477
-    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Player
-    uniqueID: 4096615545
+  - name: BG
+    uniqueID: 2752818477
     locked: 0
   - name: Creep
     uniqueID: 944213173
+    locked: 0
+  - name: Player
+    uniqueID: 4096615545
     locked: 0
   - name: Panel
     uniqueID: 747449673

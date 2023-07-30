@@ -137,4 +137,14 @@ public class NumBulletSpawn : MonoBehaviour
             button[i].SetActive(true);
         }
     }
+
+    public void UnCLick()
+    {
+        while (buttonsClicked.Count > 0)
+        {
+            int temp = buttonsClicked.Peek();
+            isClicked[temp] = false;
+            buttonsClicked.Dequeue();
+        }
+    }    
 }

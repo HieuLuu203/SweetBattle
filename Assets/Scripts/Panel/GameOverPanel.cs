@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameOverPanel : MonoBehaviour
 {
@@ -28,13 +29,13 @@ public class GameOverPanel : MonoBehaviour
 
     public void GameOver()
     {
-        Debug.Log("ahihi");
         gameObject.SetActive(true);
-        wrapAnimator.SetBool("isOpen", true);
+        StartCoroutine("EndGame");
     }
 
     public void OnRePlayButton()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene("GamePlay");
     }
 
@@ -42,4 +43,12 @@ public class GameOverPanel : MonoBehaviour
     {
         SceneManager.LoadScene("Home");
     }
+
+    private IEnumerator EndGame()
+    {
+        yield return new WaitForSecondsRealtime(1.5f);
+        GetComponent<Image>().color = new Color32(56, 56, 56, 136);
+        wrapAnimator.SetBool("isOpen", true);
+        Time.timeScale = 0;
+    }    
 }

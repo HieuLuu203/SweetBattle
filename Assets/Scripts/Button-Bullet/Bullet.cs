@@ -49,7 +49,7 @@ public class Bullet : MonoBehaviour
         GetComponent<SpriteRenderer>().enabled = true;
         this.gameObject.SetActive(true);
         
-        rigidbody.velocity = Vector2.right * 15;
+        rigidbody.velocity = Vector2.right * 25;
         CalBullet.Instance.Shooting();
         NumBulletSpawn.Instance.Shooting();
         switch (CalBullet.Instance.getCalculation())
@@ -100,7 +100,7 @@ public class Bullet : MonoBehaviour
 
     private IEnumerator Reset()
     {
-        yield return new WaitForSecondsRealtime(0.6f);
+        yield return new WaitForSecondsRealtime(0.3f);
         gameObject.SetActive(false);
     }
 }

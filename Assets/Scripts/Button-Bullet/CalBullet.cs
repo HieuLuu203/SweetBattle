@@ -130,4 +130,10 @@ public class CalBullet : MonoBehaviour
         buttonClicked = -1;
         calculation = 0;
     }   
+
+    public void UnClick()
+    {
+        buttonClicked = -1;
+        calculation = 0;
+    }    
 }

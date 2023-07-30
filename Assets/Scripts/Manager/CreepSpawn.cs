@@ -22,7 +22,7 @@ public class CreepSpawn : MonoBehaviour
         if (timer > 3f)
         {
             spawnCreep();
-            timer = -5f + (float) ScoreManager.Instance.getScore()/20f;
+            timer = -5f + (float) ScoreManager.Instance.getScore()/200f;
         }
         else
         {

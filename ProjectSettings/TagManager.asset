@@ -19,10 +19,10 @@ TagManager:
   - BG
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - Canvas
+  - Player
+  - Panel
+  - Creep
   - 
   - 
   - 
@@ -46,15 +46,21 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Default
-    uniqueID: 0
-    locked: 0
   - name: BG
     uniqueID: 2752818477
+    locked: 0
+  - name: Default
+    uniqueID: 0
     locked: 0
   - name: Player
     uniqueID: 4096615545
     locked: 0
+  - name: Creep
+    uniqueID: 944213173
+    locked: 0
+  - name: Panel
+    uniqueID: 747449673
+    locked: 0
   - name: UI
-    uniqueID: 2921309319
+    uniqueID: 2477923359
     locked: 0

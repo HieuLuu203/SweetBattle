@@ -82,6 +82,13 @@ public class Bullet : MonoBehaviour
             anim.SetBool("isTouched", true);
             rigidbody.velocity = Vector3.left * 0.5f;
             StartCoroutine("Reset");
+
+
+            //SLOWDOWN
+    
+            //Animator creepAnim = collision.gameObject.GetComponent<Animator>();
+
+            //StartCoroutine("SlowDelay", creepAnim);
         }
 
     }
@@ -103,4 +110,6 @@ public class Bullet : MonoBehaviour
         yield return new WaitForSecondsRealtime(0.3f);
         gameObject.SetActive(false);
     }
+
+
 }

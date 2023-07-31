@@ -122,4 +122,15 @@ public class Creep : MonoBehaviour
         if (a > b) return a;
         return b;
     }
+    //public void Slow()
+    //{
+    //    StartCoroutine("Slow");
+    //}
+    //IEnumerator SlowDelay(Animator anim)
+    //{
+    //    anim.SetBool("isSlow", true);
+    //    yield return new WaitForSecondsRealtime(3.5f);
+    //    anim.SetBool("isSlow", false);
+    //    yield return null;
+    //}
 }

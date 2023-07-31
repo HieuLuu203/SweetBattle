@@ -8,6 +8,9 @@ public class PausePanel : MonoBehaviour
     // Start is called before the first frame update
     public static PausePanel instance { get; private set; }
     private Animator popupAnimator;
+    private GameObject SettingPanel;
+    private Animator settingPanelAnimator;
+    
     private void Awake()
     {
         instance = this; 
@@ -16,6 +19,9 @@ public class PausePanel : MonoBehaviour
     {
         gameObject.SetActive(false);
         popupAnimator = transform.Find("Pop Up").gameObject.GetComponent<Animator>();
+        SettingPanel = transform.Find("SettingPanel").gameObject;
+        SettingPanel.SetActive(false);
+        settingPanelAnimator = SettingPanel.transform.Find("Board").gameObject.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -46,6 +52,7 @@ public class PausePanel : MonoBehaviour
     }
     public void OnSettingButton()
     {
-
+        SettingPanel.SetActive(true);
+        settingPanelAnimator.SetBool("isOpen", true);
     }
 }

@@ -9,6 +9,7 @@ public class UIManager : MonoBehaviour
     public Sprite cantClickButton;
     public Sprite clickedButton;
     public Sprite canClickButton;
+    public Sprite cantClickAttack;
 
     private void Awake()
     {

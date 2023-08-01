@@ -1864,6 +1864,7 @@ MonoBehaviour:
   cantClickButton: {fileID: 21300000, guid: 1a81ee5a6040d9e4e9aa7af3f1b137c5, type: 3}
   clickedButton: {fileID: 21300000, guid: 01c79ffd4532d634ba7ee1581e77eb45, type: 3}
   canClickButton: {fileID: 21300000, guid: 6a795e0325fce834097853ab29a0b203, type: 3}
+  cantClickAttack: {fileID: 21300000, guid: 01b6ef9fd6f0bdd40a8f2e457b287f2a, type: 3}
 --- !u!4 &477608828
 Transform:
   m_ObjectHideFlags: 0

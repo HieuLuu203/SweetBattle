@@ -22,7 +22,7 @@ public class FireButton : MonoBehaviour
         }
         else
         {
-            GetComponent<Image>().sprite = UIManager.Instance.cantClickButton;
+            GetComponent<Image>().sprite = UIManager.Instance.cantClickAttack;
         }
     }
 }

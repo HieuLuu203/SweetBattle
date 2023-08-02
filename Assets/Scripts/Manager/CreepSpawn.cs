@@ -8,10 +8,12 @@ public class CreepSpawn : MonoBehaviour
     [SerializeField] private GameObject boss;
     private float timer;
     private int check;
+    public static bool isSlow;
  
     // Start is called before the first frame update
     void Start()
     {
+        isSlow = false;
         timer = 0;
         check = 0;
     }
@@ -40,4 +42,15 @@ public class CreepSpawn : MonoBehaviour
             check = ScoreManager.Instance.getScore() / 100;
         }
     }
+
+    public void Slow()
+    {
+        isSlow = true;
+    }    
+
+    IEnumerator SlowTime()
+    {
+        yield return new WaitForSecondsRealtime(3f);
+        isSlow = false;
+    }    
 }

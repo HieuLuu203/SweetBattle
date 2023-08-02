@@ -56,6 +56,8 @@ public class Creep : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (CreepSpawn.isSlow == true) anim.SetBool("isSlow", true);
+        else anim.SetBool("isSlow", false);
         healthText.transform.position.Set(transform.position.x, healthText.transform.position.y, 0);
         healthText.GetComponent<TMP_Text>().text = health.ToString();
         if (isShoot == true) rb.velocity = Vector3.zero;

@@ -46,6 +46,7 @@ public class CreepSpawn : MonoBehaviour
     public void Slow()
     {
         isSlow = true;
+        StartCoroutine("SlowTime");
     }    
 
     IEnumerator SlowTime()

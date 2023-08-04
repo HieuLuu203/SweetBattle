@@ -56,16 +56,29 @@ public class Creep : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (CreepSpawn.isSlow == true) anim.SetBool("isSlow", true);
-        else anim.SetBool("isSlow", false);
-        healthText.transform.position.Set(transform.position.x, healthText.transform.position.y, 0);
-        healthText.GetComponent<TMP_Text>().text = health.ToString();
+        
         if (isShoot == true) rb.velocity = Vector3.zero;
         else
         {
             if (isRage == true) rb.velocity = Vector2.left * 5f;
-            else rb.velocity = Vector2.left * velocity;
+            else
+            {
+                if (CreepSpawn.isSlow == true)
+                {
+                    anim.Play("Slow Down");
+                    anim.SetBool("isSlow", true);
+                    rb.velocity = Vector2.left * 0.5f;
+                }
+                else
+                {
+                    anim.SetBool("isSlow", false);
+                    rb.velocity = Vector2.left * velocity;
+                }
+            }
         }
+
+        healthText.transform.position.Set(transform.position.x, healthText.transform.position.y, 0);
+        healthText.GetComponent<TMP_Text>().text = health.ToString();
         //velocity = 1f + (float)ScoreManager.Instance.getScore() / 300f;
         //transform.position = transform.position + Vector3.left * velocity * Time.deltaTime;
     }

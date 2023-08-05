@@ -7,9 +7,9 @@ public class ScoreManager : MonoBehaviour
 {
     // Start is called before the first frame update
     public static ScoreManager Instance;
-    [SerializeField] private TextMeshProUGUI scoreText;
-    [SerializeField] private TextMeshProUGUI highscoreText;
-    private int score;
+    public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI highscoreText;
+    public int score;
 
     private void Awake()
     {
@@ -39,6 +39,10 @@ public class ScoreManager : MonoBehaviour
     public int getScore()
     {
         return score;
+    }
+    public int getHighscore()
+    {
+        return PlayerPrefs.GetInt("Highscore", 0);
     }
 
     public void addScore(int num)

@@ -74,6 +74,19 @@ public class Boss : MonoBehaviour
             else health -= Bullet.Instance.getDamage();
         }
 
+        if (collision.gameObject.tag == "Penetrate" && isRage == false)
+        {
+            if (health <= 100)
+            {
+                isShoot = true;
+                anim.Play("Boss Die");
+                anim.SetBool("isDead", true);
+                StartCoroutine("CreepDie");
+                ScoreManager.Instance.addScore(50);
+            }
+            else health -= 100;
+        }
+
     }
 
     private IEnumerator CreepDie()

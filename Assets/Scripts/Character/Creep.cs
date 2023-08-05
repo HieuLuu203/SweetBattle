@@ -99,6 +99,7 @@ public class Creep : MonoBehaviour
             if (Bullet.Instance.getDamage() >= health)
             {
                 isShoot = true;
+                anim.Play("Creep Die");
                 anim.SetBool("isDead", true);
                 StartCoroutine("CreepDie");
                 ScoreManager.Instance.addScore(10);
@@ -116,11 +117,20 @@ public class Creep : MonoBehaviour
             } 
                 
         }
+
+        if (collision.gameObject.tag == "Penetrate" && isRage == false)
+        {
+            isShoot = true;
+            anim.Play("Creep Die");
+            anim.SetBool("isDead", true);
+            StartCoroutine("CreepDie");
+            ScoreManager.Instance.addScore(10);
+        }
     }
 
     private IEnumerator CreepDie()
     {
-        yield return new WaitForSecondsRealtime(1f);
+        yield return new WaitForSecondsRealtime(0.8f);
         gameObject.SetActive(false);
         anim.SetBool("isDead", false);
     }

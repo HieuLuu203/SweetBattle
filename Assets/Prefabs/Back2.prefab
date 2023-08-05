@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3653150333245808822}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Back2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,7 +42,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3292522272145160972}
   - component: {fileID: 8797078736419341367}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Back Ground 2 _0
   m_TagString: Untagged
   m_Icon: {fileID: 0}

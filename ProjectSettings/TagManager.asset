@@ -12,6 +12,7 @@ TagManager:
   - Bullet
   - BG
   - Music
+  - Penetrate
   layers:
   - Default
   - TransparentFX
@@ -23,7 +24,7 @@ TagManager:
   - Player
   - Panel
   - Creep
-  - 
+  - Boss
   - 
   - 
   - 
@@ -46,11 +47,14 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: BG
+    uniqueID: 2752818477
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: BG
-    uniqueID: 2752818477
+  - name: Boss
+    uniqueID: 509733121
     locked: 0
   - name: Creep
     uniqueID: 944213173

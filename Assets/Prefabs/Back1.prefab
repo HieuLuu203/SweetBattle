@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4596276949674064724}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Back1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,7 +42,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7862487253815341315}
   - component: {fileID: 4707591231854562509}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: "Background - M\xE0n h\xECnh chi\u1EBFn \u0111\u1EA5u"
   m_TagString: Untagged
   m_Icon: {fileID: 0}

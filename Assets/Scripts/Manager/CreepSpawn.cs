@@ -48,15 +48,26 @@ public class CreepSpawn : MonoBehaviour
 
     public void Slow()
     {
-        isSlow = true;
+        
         //SlowLayer.gameObject.SetActive(true);
         StartCoroutine("SlowTime");
     }    
 
     IEnumerator SlowTime()
     {
+        isSlow = true;
+        SlowLayer.gameObject.SetActive(true);
+        yield return new WaitForSeconds(0.3f);
+
+        SlowLayer.gameObject.SetActive(false);
+        yield return new WaitForSeconds(0.2f);
+        SlowLayer.gameObject.SetActive(true);
+        yield return new WaitForSeconds(0.3f);
+
+        SlowLayer.gameObject.SetActive(false);
         yield return new WaitForSecondsRealtime(3f);
+
         isSlow = false;
-        //SlowLayer.gameObject.SetActive(true);
+        
     }    
 }

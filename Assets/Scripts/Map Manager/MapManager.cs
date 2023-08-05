@@ -1,6 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MapManager : MonoBehaviour
 {
@@ -29,6 +29,7 @@ public class MapManager : MonoBehaviour
         if(mapScriptable.Length > 0)
         {
             currentMap = mapScriptable[0];
+            //currentMap.localScale = Vector3.Scale(new Vector3(1f, 1f, 1f), new Vector3(1.2f, 1.2f, 1.2f));
         }
     }
 

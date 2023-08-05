@@ -7,5 +7,6 @@ public class Map : ScriptableObject
 {
     public string mapName;
     public GameObject mapPrefab;
-
+    public GameObject backgroundPrefab;
+    internal Vector3 localScale;
 }

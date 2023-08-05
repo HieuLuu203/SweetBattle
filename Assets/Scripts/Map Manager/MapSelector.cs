@@ -41,7 +41,7 @@ public class MapSelector : MonoBehaviour
         }
         if (prevMap != null)
         {
-            selectedMap.localScale = Vector3.Lerp(selectedMap.localScale, new Vector3(1f, 1f, 1f), Time.deltaTime * 10);
+            prevMap.localScale = Vector3.Lerp(prevMap.localScale, new Vector3(1f, 1f, 1f), Time.deltaTime * 10);
         }
 
     }

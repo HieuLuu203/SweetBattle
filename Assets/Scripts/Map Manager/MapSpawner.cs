@@ -7,6 +7,6 @@ public class MapSpawner : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        Instantiate(MapManager.Instance.currentMap.mapPrefab, transform.position, Quaternion.identity);
+        Instantiate(MapManager.Instance.currentMap.backgroundPrefab, transform.position, Quaternion.identity);
     }
 }

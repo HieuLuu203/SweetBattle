@@ -21,16 +21,17 @@ public class MapManager : MonoBehaviour
         }
 
         DontDestroyOnLoad(gameObject);
+        if (mapScriptable.Length > 0)
+        {
+            currentMap = mapScriptable[0];
+            //currentMap.localScale = Vector3.Scale(new Vector3(1f, 1f, 1f), new Vector3(1.2f, 1.2f, 1.2f));
+        }
     }
 
 
     private void Start()
     {
-        if(mapScriptable.Length > 0)
-        {
-            currentMap = mapScriptable[0];
-            //currentMap.localScale = Vector3.Scale(new Vector3(1f, 1f, 1f), new Vector3(1.2f, 1.2f, 1.2f));
-        }
+        
     }
 
     public void SetMap(Map map)

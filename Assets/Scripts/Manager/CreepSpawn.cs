@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CreepSpawn : MonoBehaviour
 {
     [SerializeField] private GameObject creep;
     [SerializeField] private GameObject boss;
+    [SerializeField] private Image SlowLayer;
     private float timer;
     private int check;
     public static bool isSlow;
@@ -13,6 +15,7 @@ public class CreepSpawn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        SlowLayer.gameObject.SetActive(false);
         isSlow = false;
         timer = 0;
         check = 0;
@@ -46,6 +49,7 @@ public class CreepSpawn : MonoBehaviour
     public void Slow()
     {
         isSlow = true;
+        //SlowLayer.gameObject.SetActive(true);
         StartCoroutine("SlowTime");
     }    
 
@@ -53,5 +57,6 @@ public class CreepSpawn : MonoBehaviour
     {
         yield return new WaitForSecondsRealtime(3f);
         isSlow = false;
+        //SlowLayer.gameObject.SetActive(true);
     }    
 }

@@ -41,6 +41,8 @@ public class GameOverPanel : MonoBehaviour
 
     public void OnHomeButton()
     {
+        MusicManager.Instance.music[1].Stop();
+        MusicManager.Instance.music[0].Play();
         SceneManager.LoadScene("Home");
     }
 
@@ -50,5 +52,6 @@ public class GameOverPanel : MonoBehaviour
         GetComponent<Image>().color = new Color32(56, 56, 56, 136);
         wrapAnimator.SetBool("isOpen", true);
         Time.timeScale = 0;
+        PlaySound.Instance.GameOver();
     }    
 }

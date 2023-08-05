@@ -37,8 +37,10 @@ public class Tip : MonoBehaviour
     IEnumerator Delay()
     {
         //animator.SetBool("isAppear", true);
-        yield return new WaitForSeconds(4.2f);
+        yield return new WaitForSeconds(3.2f);
         SceneManager.LoadScene("GamePlay");
+        MusicManager.Instance.music[1].Play();
+        MusicManager.Instance.music[0].Stop();
         //animator.SetBool("isAppear", false);
     }
 

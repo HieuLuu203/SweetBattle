@@ -81,6 +81,7 @@ public class NumBulletSpawn : MonoBehaviour
     {
         if (isClicked[option] == false)
         {
+            PlaySound.Instance.BulletButton();
             if (buttonsClicked.Count < maxClickButton)
             {
                 numberChosen1 = option;

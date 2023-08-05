@@ -62,6 +62,7 @@ public class CalBullet : MonoBehaviour
     public void Click(int button)
     {
         if (cals[button] == 5 && NumBulletSpawn.Instance.getClicked() == 2) return;
+        PlaySound.Instance.BulletButton();
         buttonClicked = button;
         calculation = cals[button];
     }

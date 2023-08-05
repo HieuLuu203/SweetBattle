@@ -41,6 +41,8 @@ public class PausePanel : MonoBehaviour
     public void OnHomeButton()
     {
         Time.timeScale = 1;
+        MusicManager.Instance.music[1].Stop();
+        MusicManager.Instance.music[0].Play();
         SceneManager.LoadScene("Home");
     }
 

@@ -35,9 +35,11 @@ public class Creep : MonoBehaviour
         num1 = NumBulletSpawn.Instance.getNumber(temp1);
         num2 = NumBulletSpawn.Instance.getNumber(temp2);
 
+        //neu ca 2 la dau tru
         if (CalBullet.Instance.getCals(0) == 5 && CalBullet.Instance.getCals(1) == 5)
         {
-            health = Random.Range(num1 + num2 - 10, num1 + num2);
+            //=  tong hai so
+            health = max(Random.Range(num1 + num2 - 10, num1 + num2), 1);
             return;
         }
         
@@ -45,12 +47,12 @@ public class Creep : MonoBehaviour
         {
             if (CalBullet.Instance.getCals(i) == 5)
             {
-                health = Random.Range(Calculate(1 - i) - 10, Calculate(1 - i));
+                health = max(Random.Range(Calculate(1 - i) - 10, Calculate(1 - i)), 1);
                 return;
             }
         }
         int cal = Random.Range(0,2);
-        health = Random.Range(min(1,Calculate(cal) - 10), Calculate(cal));
+        health = max(Random.Range(max(1,Calculate(cal) - 10), Calculate(cal)), 1);
     }
 
     // Update is called once per frame
@@ -69,6 +71,7 @@ public class Creep : MonoBehaviour
                     anim.SetBool("isSlow", true);
                     rb.velocity = Vector2.left * 0.5f;
                 }
+            
                 else
                 {
                     anim.SetBool("isSlow", false);
@@ -132,7 +135,7 @@ public class Creep : MonoBehaviour
 
      
 
-    private int min (int a, int b)
+    private int max (int a, int b)
     {
         if (a > b) return a;
         return b;

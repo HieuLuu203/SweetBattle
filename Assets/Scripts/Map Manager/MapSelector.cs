@@ -26,7 +26,11 @@ public class MapSelector : MonoBehaviour
                 }
                 selectedMap = option.transform;
             });
+            if(selectedMap != null)
+        {
+            selectedMap.localScale = Vector3.Lerp(selectedMap.localScale, new Vector3(1.2f, 1.2f, 1.2f), Time.deltaTime * 10);
 
+        }
             GameObject mapSprite = option;
 
 

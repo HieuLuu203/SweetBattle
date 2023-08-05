@@ -26,7 +26,7 @@ public class MapManager : MonoBehaviour
 
     private void Start()
     {
-        if(mapScriptable.Length > 0 && currentMap == null)
+        if(mapScriptable.Length > 0)
         {
             currentMap = mapScriptable[0];
         }

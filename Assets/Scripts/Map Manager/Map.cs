@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Map", menuName = "Maps")]
 public class Map : ScriptableObject
 {
-    [SerializeField] string mapName;
-    [SerializeField] GameObject mapPrefab;
+    public string mapName;
+    public GameObject mapPrefab;
 
 }

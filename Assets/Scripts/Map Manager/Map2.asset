@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afa8206ce8a4a2b4989adc406744931b, type: 3}
   m_Name: Map2
   m_EditorClassIdentifier: 
-  mapName: Dreamy Heaven
-  mapPrefab: {fileID: 5532948816732899448, guid: a7723288da856eb498e39c4a813ca330, type: 3}
+  mapName: Map2
+  mapPrefab: {fileID: 2432414312089557139, guid: 75833e2dce2f24e44882a8c4de9c31f8, type: 3}

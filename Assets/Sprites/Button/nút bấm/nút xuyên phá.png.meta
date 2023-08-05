@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 01b6ef9fd6f0bdd40a8f2e457b287f2a
+guid: 0c537304f2d962748acc582bfe266fa5
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -114,7 +114,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: WebGL
+    buildTarget: iPhone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -126,7 +126,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: iPhone
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -165,13 +165,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "n\xFAt attack (kh\xF4ng ch\u1ECDn \u0111\u01B0\u1EE3c)_0"
+      name: "n\xFAt xuy\xEAn ph\xE1_0"
       rect:
         serializedVersion: 2
-        x: 42
-        y: 0
-        width: 240
-        height: 246
+        x: 129
+        y: 127
+        width: 300
+        height: 307
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,8 +179,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f92cd33172a7eb04da943babc7b5bea3
-      internalID: -695771383
+      spriteID: ac1bcf99c5c94bb4b8e17662a90db4a0
+      internalID: 137353907
       vertices: []
       indices: 
       edges: []
@@ -196,7 +196,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      "n\xFAt attack (kh\xF4ng ch\u1ECDn \u0111\u01B0\u1EE3c)_0": -695771383
+      "n\xFAt xuy\xEAn ph\xE1_0": 137353907
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

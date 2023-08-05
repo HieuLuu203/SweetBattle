@@ -2,43 +2,47 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class SlowDownButton : MonoBehaviour
-{
-    // Start is called before the first frame update
-    [SerializeField] private Camera MainCamera;
+public class SlowDownButton : MonoBehaviour {
+
+    private float timeTilNext;
+    private float timeCurrent;
     void Start()
     {
-
+        PlayerPrefs.SetInt("isCanSlow", 1);
+        timeTilNext = 30.0f;//const
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(PlayerPrefs.GetInt("isCanSlow") == 0)
+        {
+            
+            timeCurrent += Time.deltaTime;
+            gameObject.GetComponent<Image>().fillAmount = timeCurrent / timeTilNext;
+        }
+        if(timeCurrent > timeTilNext)
+        {
+            PlayerPrefs.SetInt("isCanSlow", 1);
+        }
 
     }
-
 
     public void OnSlowDownButton()
     {
-        GameObject[] creeps = GameObject.FindGameObjectsWithTag("Creep");
-
-        foreach (GameObject creep in creeps)
-        {
-            Renderer renderer = creep.GetComponent<Renderer>();
-
-            if (renderer != null && renderer.isVisible)
+        
+            if (PlayerPrefs.GetInt("isCanSlow") == 1)
             {
-                Animator anim = creep.GetComponent<Animator>();
-                StartCoroutine("SetAnimSlow",anim);
+                timeCurrent = 0.0f;
+                PlayerPrefs.SetInt("isCanSlow", 0);
             }
-        }
+     
+        
     }
 
-    IEnumerator SetAnimSlow(Animator anim)
-    {
-        anim.SetBool("isSlow", true);
-        yield return new WaitForSecondsRealtime(3.5f);
-        anim.SetBool("isSlow", false);
-    }
+
 }
+
+   

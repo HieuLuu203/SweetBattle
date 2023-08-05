@@ -48,9 +48,12 @@ public class CreepSpawn : MonoBehaviour
 
     public void Slow()
     {
+        if(PlayerPrefs.GetInt("isCanSlow") == 1)
+        {
+            //SlowLayer.gameObject.SetActive(true);
+            StartCoroutine("SlowTime");
+        }
         
-        //SlowLayer.gameObject.SetActive(true);
-        StartCoroutine("SlowTime");
     }    
 
     IEnumerator SlowTime()

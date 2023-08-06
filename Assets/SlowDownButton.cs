@@ -19,7 +19,8 @@ public class SlowDownButton : MonoBehaviour {
     }
     void Start()
     {
-        PlayerPrefs.SetInt("isCanSlow", 0);
+
+        isCanSlow = true;
         timeTilNext = 30.0f;//const
         slow = gameObject.GetComponent<Image>();
     }
@@ -37,11 +38,11 @@ public class SlowDownButton : MonoBehaviour {
                 isCanSlow = true;
             }
         }
-        if(timeCurrent == 0f)
-        {
-            isCanSlow = false;
-        }
-        
+        //if (timeCurrent == 0f)
+        //{
+        //    isCanSlow = false;
+        //}
+
 
     }
 

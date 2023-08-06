@@ -7,8 +7,9 @@ using UnityEngine.UI;
 public class Map : ScriptableObject
 {
     public string mapName;
-    public GameObject mapPrefab;
-    public GameObject backgroundPrefab;
+    public Image mapButton;
     internal Vector3 localScale;
     public Image mapImage;
+    public bool isLock;
+    public GameObject lockPrefab;
 }

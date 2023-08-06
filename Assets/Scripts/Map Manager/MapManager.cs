@@ -23,13 +23,7 @@ public class MapManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
         if (mapScriptable.Length > 0)
         {
-            Debug.Log("co map");
             currentMap = mapScriptable[0];
-            //currentMap.localScale = Vector3.Scale(new Vector3(1f, 1f, 1f), new Vector3(1.2f, 1.2f, 1.2f));
-        }
-        else
-        {
-            Debug.Log("khong co map");
         }
     }
 
@@ -38,6 +32,8 @@ public class MapManager : MonoBehaviour
     {
         
     }
+
+    
 
     public void SetMap(Map map)
     {

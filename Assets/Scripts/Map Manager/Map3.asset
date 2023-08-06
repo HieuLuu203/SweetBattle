@@ -10,8 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: afa8206ce8a4a2b4989adc406744931b, type: 3}
-  m_Name: Map1
+  m_Name: Map3
   m_EditorClassIdentifier: 
   mapName: Dreamy Heaven
-  mapButton: {fileID: 7645956431382913028, guid: a7723288da856eb498e39c4a813ca330, type: 3}
-  mapImage: {fileID: 3614843455666924673, guid: 07765b234873a0a40b78394ccf6ce03b, type: 3}
+  mapButton: {fileID: 6069100720436764009, guid: 75fc507fe6fa5b940ab8b01eb71debe9, type: 3}
+  mapImage: {fileID: 3614843455666924673, guid: a02b3b3e8ddd8d447b09f1ee0ca4d069, type: 3}
+  isLock: 0
+  lockPrefab: {fileID: 2432414312089557139, guid: d5cbe9b3f5fdf07469cacc40b8d44db8, type: 3}

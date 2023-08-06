@@ -6,36 +6,52 @@ using UnityEngine.UI;
 public class MapSelector : MonoBehaviour
 {
     public GameObject optionPrefab;
+    public GameObject lockPrefab;
 
     public Transform prevMap;
     public Transform selectedMap;
 
     private void Start()
     {
-        foreach(Map m in MapManager.Instance.mapScriptable)
+        
+    }
+
+    private void OnEnable()
+    {
+        foreach (Map m in MapManager.Instance.mapScriptable)
         {
-            GameObject option = Instantiate(optionPrefab, transform);
+            if (PlayerPrefs.GetInt("Highscore") >= 300 && m==MapManager.Instance.mapScriptable[1]) m.isLock = false;
+            if (PlayerPrefs.GetInt("Highscore") >= 600 && m == MapManager.Instance.mapScriptable[2]) m.isLock = false;
+            GameObject option;
+            if (m.isLock)
+            {
+                option = Instantiate(m.lockPrefab, transform);
+            }
+            else
+            {
+                option = Instantiate(optionPrefab, transform);
+            }
             Button button = option.GetComponent<Button>();
 
-            button.onClick.AddListener(() =>
+            if (!m.isLock)
             {
-                MapManager.Instance.SetMap(m);
-                if(selectedMap != null )
+                button.onClick.AddListener(() =>
                 {
-                    prevMap = selectedMap;
-                }
-                selectedMap = option.transform;
-            });
-            if(selectedMap != null)
-            {
-                //selectedMap.localScale = Vector3.Lerp(selectedMap.localScale, new Vector3(1.1f, 1.1f, 1.1f), Time.deltaTime * 10);
-
+                    MapManager.Instance.SetMap(m);
+                    if (selectedMap != null)
+                    {
+                        prevMap = selectedMap;
+                    }
+                    selectedMap = option.transform;
+                });
             }
-            GameObject mapSprite = option;
+            Image image = option.GetComponentInChildren<Image>();
+            image.sprite = m.mapButton.sprite;
 
 
         }
     }
+
     private void Update()
     {
         if(selectedMap != null)
@@ -47,6 +63,11 @@ public class MapSelector : MonoBehaviour
         {
             prevMap.localScale = Vector3.Lerp(prevMap.localScale, new Vector3(1f, 1f, 1f), Time.deltaTime * 10);
         }
+
+    }
+
+    public void Load()
+    {
 
     }
 }

@@ -15,3 +15,4 @@ MonoBehaviour:
   mapName: Dreamy Heaven
   mapPrefab: {fileID: 5532948816732899448, guid: a7723288da856eb498e39c4a813ca330, type: 3}
   backgroundPrefab: {fileID: 2590609292285463817, guid: 83e9d623e91747e49b692767bba8e842, type: 3}
+  mapImage: {fileID: 3614843455666924673, guid: 07765b234873a0a40b78394ccf6ce03b, type: 3}

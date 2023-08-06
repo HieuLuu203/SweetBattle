@@ -6,40 +6,55 @@ using UnityEngine.UI;
 
 public class SlowDownButton : MonoBehaviour {
 
+    private bool isCanSlow;
+    public static SlowDownButton instance {  get; private set; }
     private float timeTilNext;
-    private float timeCurrent;
+    [SerializeField] private float timeCurrent;
+    private Image slow;
+
+
+    private void Awake()
+    {
+        instance = this;
+    }
     void Start()
     {
-        PlayerPrefs.SetInt("isCanSlow", 1);
+        PlayerPrefs.SetInt("isCanSlow", 0);
         timeTilNext = 30.0f;//const
+        slow = gameObject.GetComponent<Image>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(PlayerPrefs.GetInt("isCanSlow") == 0)
+        if(isCanSlow == false)
         {
-            
+          
             timeCurrent += Time.deltaTime;
-            gameObject.GetComponent<Image>().fillAmount = timeCurrent / timeTilNext;
+            slow.fillAmount = timeCurrent / timeTilNext;
+            if (timeCurrent > timeTilNext)
+            {
+                isCanSlow = true;
+            }
         }
-        if(timeCurrent > timeTilNext)
+        if(timeCurrent == 0f)
         {
-            PlayerPrefs.SetInt("isCanSlow", 1);
+            isCanSlow = false;
         }
+        
 
     }
 
     public void OnSlowDownButton()
     {
-        
-            if (PlayerPrefs.GetInt("isCanSlow") == 1)
-            {
-                timeCurrent = 0.0f;
-                PlayerPrefs.SetInt("isCanSlow", 0);
-            }
-     
-        
+        timeCurrent = 0.0f;
+        isCanSlow = false;
+
+    }
+
+    public bool getIsCanSlow()
+    {
+        return isCanSlow;
     }
 
 

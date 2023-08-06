@@ -15,3 +15,4 @@ MonoBehaviour:
   mapName: Map2
   mapPrefab: {fileID: 2432414312089557139, guid: 75833e2dce2f24e44882a8c4de9c31f8, type: 3}
   backgroundPrefab: {fileID: 648079316515980437, guid: 5b47fe63bddc8f24a81905233c4079c3, type: 3}
+  mapImage: {fileID: 3614843455666924673, guid: 44349d458efef0047b2a6f79cd2a46eb, type: 3}

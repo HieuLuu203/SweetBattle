@@ -19,7 +19,7 @@ public class PenetrateBullet : MonoBehaviour
     {
         yield return new WaitForSecondsRealtime(0.8f);
         GetComponent<BoxCollider2D>().enabled = true;
-        yield return new WaitForSecondsRealtime(1f);
+        yield return new WaitForSecondsRealtime(0.8f);
         this.gameObject.SetActive(false);
     }
 }

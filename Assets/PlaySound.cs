@@ -30,4 +30,9 @@ public class PlaySound : MonoBehaviour
     {
         MusicManager.Instance.PlaySound(clip[2], 2);
     }
+
+    public void Ultimate()
+    {
+        MusicManager.Instance.PlaySound(clip[3], 3);
+    }
 }
